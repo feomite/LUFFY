@@ -115,4 +115,13 @@ LUFFY/
 - [ ] **luffy/verl/verl/single_controller/ray/base.py:439** - create a class with customizable name
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/arg_utils.py:64** - (shengguangming): delete the unused args
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/arg_utils.py:147** - (woosuk): Support fine-grained seeds (e.g., seed per request).
-- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm.py:237** - (shengguangming): maybe we can hack the autoregressive logics without only ...
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm.py:237** - (shengguangming): maybe we can hack the autoregressive logics without only apply post process for better performance
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm.py:241** - (sgm): we can optimize it by making the dataloader yield List[int] without padding.
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm.py:257** - (shengguangming): can be optimzied by rewrite the Sampler._get_logprobs() logits
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm_engine_sp.py:99** - (woosuk): Print more configs in debug mode.
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm_engine_sp.py:101** - currently is hfconfig
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm_engine_sp.py:112** - (shengguangming): maybe we can choose init here or from arguments
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm_engine_sp.py:145** - check get_lora_tokenizer func
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm_engine_sp.py:586** - check this input
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm_engine_sp.py:661** - we may not need to decode
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/model_loader.py:67** - (shengguangming): latest commit in vllm fix awq for this function and add load_weights
